@@ -9,7 +9,7 @@ var firebaseConfig = {
     appId: "1:422503172814:web:11f9589dacd91c8f0f1e9f"
   };
   
-  var app = initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 
 function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
      Room_names = childKey;
